@@ -224,6 +224,7 @@ metrics (VF and TFM files) and macros for use with LaTeX.
 %doc %{_texmfdistdir}/doc/fonts/pxfonts/pxfontsdoc.tex
 %doc %{_texmfdistdir}/doc/fonts/pxfonts/pxfontsdocA4.pdf
 %doc %{_texmfdistdir}/doc/fonts/pxfonts/pxfontsdocA4.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -234,3 +235,5 @@ metrics (VF and TFM files) and macros for use with LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
