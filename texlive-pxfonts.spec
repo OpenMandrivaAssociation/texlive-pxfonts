@@ -225,3 +225,17 @@ metrics (VF and TFM files) and macros for use with LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090115-2
++ Revision: 755530
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090115-1
++ Revision: 719416
+- texlive-pxfonts
+- texlive-pxfonts
+- texlive-pxfonts
+- texlive-pxfonts
+
