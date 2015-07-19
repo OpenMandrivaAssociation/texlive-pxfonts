@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-pxfonts
 Version:	20090115
-Release:	9
+Release:	10
 Summary:	Palatino-like fonts in support of mathematics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/pxfonts
