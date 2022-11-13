@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /fonts/pxfonts
-# catalog-date 2009-01-15 09:33:18 +0100
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-pxfonts
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Palatino-like fonts in support of mathematics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/pxfonts
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pxfonts.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pxfonts.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pxfonts.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pxfonts.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -32,12 +26,12 @@ Type 1 format (AFM and PFB files), and are supported by TeX
 metrics (VF and TFM files) and macros for use with LaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -218,24 +212,10 @@ metrics (VF and TFM files) and macros for use with LaTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090115-2
-+ Revision: 755530
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090115-1
-+ Revision: 719416
-- texlive-pxfonts
-- texlive-pxfonts
-- texlive-pxfonts
-- texlive-pxfonts
-
