@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Palatino-like fonts in support of mathematics
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/pxfonts
+URL:		https://www.ctan.org/tex-archive/fonts/pxfonts
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pxfonts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pxfonts.doc.r%{version}.tar.xz
