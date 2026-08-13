@@ -12,7 +12,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pxfonts.r%{tl_re
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pxfonts.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 Pxfonts supplies virtual text roman fonts using Adobe Palatino (or
@@ -26,3 +27,10 @@ derived from the parallel TX font set. All the fonts are in Type 1
 format (AFM and PFB files), and are supported by TeX metrics (VF and TFM
 files) and macros for use with LaTeX.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from pxfonts:
+Map pxfonts.map
+TL_DROPIN_EOF
