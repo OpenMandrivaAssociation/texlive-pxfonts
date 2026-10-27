@@ -34,3 +34,5 @@ cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
 # from pxfonts:
 Map pxfonts.map
 TL_DROPIN_EOF
+echo '%dir %{_texmf_updmap_d}' >> %{specpartsdir}/%{name}.files.specpart
+echo '%{_texmf_updmap_d}/%{tl_name}' >> %{specpartsdir}/%{name}.files.specpart
